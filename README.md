@@ -8,6 +8,6 @@ This implementation is a less-memory deisign, leading to much more running time.
 Compared to this version, we use a hash dict cache design, faster and simultaneously with higher memory occupation.
 
 ## Conclusion
-The numpy design or the matrix design is not suitable. The reason is most of the calculation lie in the query of fitness number, rather than the repeatitivr operation that numpy can overperform.
+The numpy design or the matrix design is not suitable. The reason is most of the calculation lies in the query of fitness number, rather than the repetitive operation that numpy can accelerate. Instead, the exchange between origianl python and numpy environment causes more cost than its benefit.
 
 Ultimately, we reach the consensus that hash dict in Python is the picked one.
