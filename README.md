@@ -2,12 +2,11 @@
 A basic NK landscape model based on numpy
 
 ## NK Landscape Comparison
-This implementation is a less-memory deisign, leading to much more running time. In such a design, the fitness is stored by list rather than the hash dict cache.
-
+This is a less-memory design, resulting in a much longer running time. Fitness values are stored by list rather than a hash dict.
 ## NK Landscape Instance
-Compared to this version, we use a hash dict cache design, faster and simultaneously with higher memory occupation.
+We also use a hash dict cache design, which is faster and occupies more memory.
 
 ## Conclusion
-The numpy design or the matrix design is not suitable. The reason is most of the calculation lies in the query of fitness number, rather than the repetitive operation that numpy can accelerate. Instead, the exchange between origianl python and numpy environment causes more cost than its benefit.
+Neither the numpy design nor the matrix design are appropriate. This is because most of the work is done by querying the fitness number, rather than by repeating repetitive operations that numpy can speed up. As a result, the exchange between the original Python environment and the Numpy environment causes more cost than benefit.
 
-Ultimately, we reach the consensus that hash dict in Python is the picked one.
+In the end, we decide that Python's hash dict is the best.
